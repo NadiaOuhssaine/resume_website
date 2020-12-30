@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['']">Home</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['about']">About</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['portfolio']">Portfolio</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['api']">APIs</mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="top: 0;
+     position: sticky;
+     z-index: 3;">
+      <mat-toolbar color="primary" class="navbar-menu" style="box-shadow: inset 0px 0px 15px 4px rgba(0, 0, 0, 0.678);">
+        <button mat-icon-button style="color:rgb(255, 255, 255)" (click)="drawer.toggle()" aria-label="button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <!-- <span class="logo" routerLink="/"><img src="assets/logo.svg" alt="logo" style="height: 60px; margin-top: 10px;"></span>
+        <span routerLink="/" style="padding-left:10px; font-size: large;">Nadia Ouhssaine</span> -->
+        <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '10%' : '32%'"   ></span>
+      </mat-toolbar>
+    </div>
+
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

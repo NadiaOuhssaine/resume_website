@@ -1,0 +1,8 @@
+<router-outlet name="landing" *ngIf="isLandingPage$ | async; else appShell"></router-outlet>
+<ng-template #appShell>
+  <app-shell>
+    <router-outlet ></router-outlet>
+  </app-shell>
+</ng-template>
+
+

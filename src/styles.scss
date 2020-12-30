@@ -1,0 +1,67 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+$md-tealorange: (
+    50 : #3523d6,
+    100 : #3436a7,
+    200 : #1b365f,
+    300 : #242f91,
+    400 : #302899,
+    500 : #23259c,
+    600 : #2c228b,
+    700 : #212369,
+    800 : #1a1549,
+    900 : #4d4d55,
+    A100 : #ff9962,
+    A200 : #ff8340,
+    A400 : #dd692a,
+    A700 : #e3591e,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-typography: mat-typography-config(
+    $font-family: 'Open Sans, sans-serif',
+    $headline: mat-typography-level(32px, 48px, 700,'Poppins, sans-serif'),
+    $title: mat-typography-level(32px, 48px, 700,'Poppins, sans-serif'),
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+$project-one-master-primary: mat-palette($md-tealorange, 900);
+$project-one-master-accent: mat-palette($md-tealorange, A200, A100, A400);
+$project-one-master-warn: mat-palette($mat-red);
+
+$project-one-master-theme: mat-light-theme((
+  color: (
+    primary: $project-one-master-primary,
+    accent: $project-one-master-accent,
+    warn: $project-one-master-warn,
+  )
+));
+
+html, body { height: 100%;  margin: 0; }
+h1{   font-family: 'Poppins', sans-serif;}
+body { font-family: 'Open Sans', sans-serif; }
+
+
+@include angular-material-theme($project-one-master-theme);
+
+@include mat-core($custom-typography);
+

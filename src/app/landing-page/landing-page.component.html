@@ -1,0 +1,29 @@
+<section class="landing-page" >
+  <div class="colour-overlay"></div>
+    <div class="container-info">
+        <div class="info-block">
+            <div class="info-block-container">
+                <h1><span><b>Welcome !</b></span></h1>
+                <h2>Je suis </h2>
+                <h1>Nadia Ouhssaine</h1>
+                <h2>Data Scientist / Data Analyst</h2>
+                <button class="download-button" *ngIf="!(isHandset$ | async)" (click)="downloadFile()" mat-raised-button>Download Resume <mat-icon class = "icon-download">get_app</mat-icon></button>
+            </div>
+        </div>
+        <div class="menu-blocks">
+            <div class="about-block menu-block"  [routerLink]="['about']">
+                <div class="about-block-container">
+                    <h2 class="about menu-item">Resume</h2>
+                </div>
+            </div>
+            <div class="portfolio-block  menu-block"  [routerLink]="['portfolio']">
+                <div class="portfolio-block-container">
+                    <h2 class="portfolio menu-item">Portfolio</h2>
+                </div>
+            </div>
+            <div class="api-block  menu-block"   [routerLink]="['api']">
+                <div class="api-block-container">
+                    <h2 class="api menu-item">API</h2>
+                </div>
+            </div>
+        </div>
