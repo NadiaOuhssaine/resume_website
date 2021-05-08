@@ -1,13 +1,38 @@
-<section class="image">
-  <div class="colour-overlay">
-      <h1><span class="name">Nadia OUHSSAINE</span></h1>
-      <h2 class="heading-business">Data Scientist  &nbsp;&diams;&nbsp;  Data Analyst</h2>
+<section class="banner">
+  <div class="more-information">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span style="font-family: Handlee; font-size: 20px;"><b><i class="fa fa-info-circle" aria-hidden="true"></i> &nbsp;En savoir plus ?</b></span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="content-more-info">
+          <h4><b>Date de naissance</b></h4>
+          <h5> 25/05/1997</h5>
+          <h4><b>Portable</b></h4>
+          <h5>06.50.31.79.66</h5>
+          <h4><b>E-mail</b> </h4>
+          <h5>ouhssaine.nadia@gmail.com</h5>
+          <h4><b>Adresse</b></h4>
+          <h5>94380 Bonneuil-sur-Marne</h5>
+          <h4><b>Site web</b></h4>
+          <h5> www.xxx.com</h5>
+        </div>
+        <button class="button-resume" (click)="downloadFile()" mat-button>  <mat-icon>get_app</mat-icon>Télécharger mon CV</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="content-banner">
+      <h1><span>Nadia OUHSSAINE</span></h1>
+      <h2>Data Scientist  &nbsp;&diams;&nbsp;  Data Analyst</h2>
+      <div class="icon">
       <a class="icon-github" mat-icon-button href="https://www.google.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>
       <a class="icon-linkedin" mat-icon-button href="https://www.google.com/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
       <a class="icon-google" mat-icon-button href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
       <a class="icon-twitter" mat-icon-button href="https://www.google.com/" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-
-    </div>
+      </div>
+  </div>
 </section>
 
 <section id="Me" style="background-color: #d3d3d3;">

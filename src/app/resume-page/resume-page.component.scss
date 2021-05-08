@@ -27,6 +27,23 @@ section {
   opacity: 1;
 }
 
+.more-information{
+  position: fixed;
+  top:80px;
+  right:40px;
+  z-index: 7;
+}
+
+.mat-expansion-panel-header {
+  background-color:  rgba(94, 94, 94, 0.836);//rgba(122, 5, 5, 0.63);
+}
+
+.content-more-info{
+  font-size: 15px;
+  margin-top : 25px;
+  margin-bottom : 30px;
+}
+
 .content-aboutme {
   margin: 0 20% 0 20%;
   text-align: center;

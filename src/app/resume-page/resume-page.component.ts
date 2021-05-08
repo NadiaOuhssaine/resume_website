@@ -5,7 +5,8 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-home-page',
   templateUrl: './resume-page.component.html',
-  styleUrls: ['./resume-page.component.scss']
+  styleUrls: ['./resume-page.component.scss'],
+
 })
 export class ResumePageComponent implements OnInit{
 
@@ -13,6 +14,9 @@ export class ResumePageComponent implements OnInit{
   isBoth$: Observable<boolean>;
   isLarge$: Observable<boolean>;
   isHandset$: Observable<boolean>;
+  panelOpenState = false;
+
+
 
   downloadFile()
   {
