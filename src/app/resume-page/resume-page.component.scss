@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
 
+
 section {
   box-sizing: border-box;
   display: flex;
@@ -11,7 +12,7 @@ section {
   background-attachment: fixed;
 }
 
-.image{
+.banner{
   height:30em;
   background-size:cover ;
   width:auto;
@@ -19,13 +20,64 @@ section {
   background-image: url(https://images.unsplash.com/photo-1563898061254-696f043d010c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1502&q=80)
 }
 
-.colour-overlay {
+.content-banner {
   background: #00000000;
   background: -webkit-linear-gradient(to right,    #000000af,#7a78789c);
   background: linear-gradient(to right,   #000000af,#7a78789c);
-  height:30em;width:auto;
+  height:30em;
+  width:auto;
   opacity: 1;
 }
+
+.content-banner h1 span{
+  position: relative;
+  top: 160px;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-family: 'Philosopher';
+  letter-spacing: .5rem;
+  color: rgb(255, 255, 255);
+  border:6px solid  #fdfdfd; // rgba(240, 54, 54, 0.596); //#ca6200; //#a76158;
+  border-radius: 10px;
+  padding:10px;
+}
+
+.content-banner h2 {
+  position: relative;
+  top: 190px;
+  font-size: 25px;
+  font-family: 'Philosopher';
+  letter-spacing: .5rem;
+  color: #FFF;
+}
+
+.icon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  top:195px;
+}
+
+
+
+.fa-github{
+  color: #ffffff;
+}
+
+.fa-linkedin-square{
+  color:rgb(255, 255, 255);
+}
+
+
+.fa-google-plus-square{
+  color: white;
+}
+
+.fa-twitter-square{
+  color: white;
+}
+
 
 .more-information{
   position: fixed;
@@ -121,45 +173,7 @@ section {
   color: #FFF;
 }
 
-.icon-github {
-  position: relative;
-  top: 195px;
-  right: 120px;
-}
 
-.fa-github{
-  color: #ffffff;
-}
-
-.icon-linkedin {
-  position: relative;
-  top: 195px;
-  right: 40px;
-}
-
-.fa-linkedin-square{
-  color:rgb(255, 255, 255);
-}
-
-.icon-google {
-  position: relative;
-  top: 195px;
-  right: -40px;
-}
-
-.fa-google-plus-square{
-  color: white;
-}
-
-.icon-twitter {
-  position: relative;
-  top: 195px;
-  right: -120px;
-}
-
-.fa-twitter-square{
-  color: white;
-}
 
 .button-resume{
   margin-top : 65px;
