@@ -11,12 +11,12 @@ section {
   background-attachment: fixed;
 }
 
-.banner{
+.banner {
   height:30em;
   background-size:cover ;
   width:auto;
   text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1563898061254-696f043d010c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1502&q=80)
+  background-image: url(/assets/pc_banner.jpg)
 }
 
 .content-banner {
@@ -28,7 +28,7 @@ section {
   opacity: 1;
 }
 
-.content-banner h1 span{
+.content-banner h1 span {
   position: relative;
   top: 160px;
   text-transform: uppercase;
@@ -36,7 +36,7 @@ section {
   font-family: 'Philosopher';
   letter-spacing: .5rem;
   color: rgb(255, 255, 255);
-  border:6px solid  #fdfdfd;
+  border:6px solid  #ffffff;
   border-radius: 10px;
   padding:10px;
 }
@@ -50,7 +50,7 @@ section {
   color: #FFF;
 }
 
-.icon{
+.icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -58,66 +58,12 @@ section {
   top:195px;
 }
 
-
-
-.fa-github{
+.fa-github,
+.fa-linkedin-square,
+.fa-google-plus-square,
+.fa-twitter-square  {
   color: #ffffff;
 }
-
-.fa-linkedin-square{
-  color:rgb(255, 255, 255);
-}
-
-
-.fa-google-plus-square{
-  color: white;
-}
-
-.fa-twitter-square{
-  color: white;
-}
-
-.aboutme{
-  background-color: #d3d3d3;
-}
-
-.heading-section{
-  text-align:center;
-  padding-top:55px;
-  padding-bottom:35px;
-  color:  #000000;
-  font-family: "Alex Brush";
-  font-size: 50px;
-}
-
-.heading-section span{
-  text-decoration:  none;
-  background: linear-gradient(to top, black 0%, black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
-  transition: background-size 0.7s;
-}
-
-.heading-section span:hover {
-  background-size: 100% 100%;
-}
-
-.aboutme p{
-  margin: 0 20% 0 20%;
-  text-align: justify;
-  font-family: "Handlee";
-  font-size: 20px;
-  line-height: 40px;
-}
-
-.aboutme .underline {
-  background: linear-gradient(to top, rgba(207, 36, 36, 0.226) /*rgba(0, 132, 255, 0.13)*/ 50%, transparent 50%);
-  color: rgb(56, 52, 52);
-  font-size: 20px;
-}
-
-.content-aboutme > mat-card {
-  width: 200px;
-}
-
 
 .more-information{
   position: fixed;
@@ -126,9 +72,8 @@ section {
   z-index: 7;
 }
 
-
 .mat-expansion-panel-header {
-  background-color:  rgba(94, 94, 94, 0.836);//rgba(122, 5, 5, 0.63);
+  background-color:  rgba(94, 94, 94, 0.836);
 }
 
 .content-more-info{
@@ -145,23 +90,78 @@ section {
   color:black;
 }
 
+.aboutme {
+  background-color: #d3d3d3;
+}
 
-@keyframes growline {
-  0% {
-    width: 0%
+.aboutme p {
+  margin: 0 20% 0 20%;
+  text-align: justify;
+  font-family: "Handlee";
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.aboutme .underline {
+  background: linear-gradient(to top, rgba(207, 36, 36, 0.226) /*rgba(0, 132, 255, 0.13)*/ 50%, transparent 50%);
+  color: rgb(56, 52, 52);
+  font-size: 20px;
+}
+
+.heading {
+  text-align:center;
+  padding-top:55px;
+  padding-bottom:35px;
+  color:  #000000;
+  font-family: "Alex Brush";
+  font-size: 50px;
+}
+
+.heading span {
+  text-decoration:  none;
+  background: linear-gradient(to top, black 0%, black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 0.7s;
+}
+
+.heading span:hover {
+  background-size: 100% 100%;
+}
+
+@media(max-width :800px){
+
+  .content-banner h1 span{
+    font-size: 30px;
+    border: inherit;
+    border-radius: inherit;
+    border-bottom:  4px solid white;
   }
-  100% {
-    width: 50%
+  .content-banner h2{
+    font-size: 18px;
+  }
+
+  .aboutme p{
+    margin: 0 5% 0 5%;
+    font-size: 16px;
+  }
+  .aboutme span{
+    font-size: 40px ;
+  }
+
+  .aboutme .underline{
+    font-size: 16px;
   }
 }
 
-@keyframes growwide {
-  0% {
-    width: 0%
-  }
-  100% {
-    width: 25%
-  }
+.hobbies-bloc {
+  margin-bottom: 100px;
+}
+
+.hobbies-icon {
+  display : flex;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
 }
 
 figcaption {
@@ -173,252 +173,166 @@ figure {
   text-align: center;
 }
 
-.hobbies-icon{
-  display : flex;
-  flex-flow: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-}
-
 @media (max-width:900px) {
-.hobbies-icon{
-flex-wrap: wrap;
-}
-.hobbies-icon img{
-  width:20%;
-  height:20%;
-}
-}
 
-.hobbies{
-  font-size: 40px;
-  font-family: 'Amatic SC';
-  color: #000000;
-  padding-bottom: 13px;
-  text-align: center;
+  .hobbies-icon {
+    flex-wrap: wrap;
+  }
+
+  .hobbies-icon img {
+    width:20%;
+    height:20%;
+  }
 }
 
-
-
-
-
-.hobbies-bloc{
-  margin-bottom: 100px;
-}
-
-
-.resume{
+.resume {
   padding:0;
   margin:0;
   font-family: 'Montserrat', sans-serif;
   box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.589);
 }
 
-/*h1{
-  font-size:60px;
-  text-align:center;
-}*/
+.resume h5 {
+  margin-bottom: 65px; text-align:center;font-family: 'Montserrat', sans serif;font-size: 30px;
+}
 
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+}
 
-.title-education{
+.timeline ul li {
+  margin-bottom: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.point {
+  min-width: 20px;
+  height: 20px;
+  background-color: rgb(206, 206, 206);
+  border-radius: 100%;
+  z-index: 2;
+  border: 3px #333333 solid;
+  position: relative;
+  right: 18px;
+}
+
+.timeline ul li .content {
+  width: 50%;
+  padding: 0 20px;
   position:relative;
-  bottom:30px;
-  font-size:20px;
-  background-color: #4d4d55;
-  padding:0.5em;
+  right: 18px;
+}
+
+.timeline ul li:nth-child(odd) .content {
+  padding-left: 0;
+}
+
+.timeline ul li:nth-child(odd) .date {
+  padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .content {
+  padding-right: 0;
+}
+
+.timeline ul li:nth-child(even) .date {
+  padding-left: 0;
+}
+
+.timeline ul li .date {
+  width: 50%;
+  padding: 0 20px;
+  font-weight: normal;
+  position: relative;
+  right: 18px;
+}
+
+.timeline ul li .date h4 {
+  background-color: #333333;
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
   color:white
 }
 
-.timeline{
-  position:relative;
-  margin:50px auto;
-  padding:40px 0;
-  width:1000px;
-  box-sizing:border-box;
+.timeline ul li .content h3 {
+  padding: 10px 20px;
+  background-color:rgb(231, 181, 181);
+  margin-bottom: 0;
   text-align: center;
-}
-.timeline:before{
-  content:'';
-  position:absolute;
-  left:50%;
-  width:5px;
-  height:100%;
-  background:  #000000;
-
-}
-
-.timeline ul{
-  padding:0;
-  margin:0;
-}
-
-.timeline ul li{
-  list-style:none;
-  position:relative;
-  width:50%;
-  padding:20px 40px;
-  box-sizing:border-box;
-}
-.timeline ul li:nth-child(odd){
-  float:left;
-  text-align:right;
-  clear:both;
-}
-.timeline ul li:nth-child(even){
-  float:right;
-  text-align:left;
-  clear:both;
-}
-.content-resume{
-  padding-bottom:0px;
-}
-
-
-.timeline ul li:nth-child(odd):before
-{
-  content:'';
-  position:absolute;
-  width:20px;
-  height:20px;
-  top:-100px;
-  right:-12px;
-  background:#6B0101;
-  border-radius:50%;
-  box-shadow:0 0 0 3px #914242;
-}
-.timeline ul li:nth-child(1):before
-{
-  content:'';
-  position:absolute;
-  width:20px;
-  height:20px;
-  top:24px;
-  right:-12px;
-  background:#6B0101;
-  border-radius:50%;
-  box-shadow:0 0 0 3px #914242;
-}
-
-.timeline ul li:nth-child(even):before
-{
-  content:'';
-  position:absolute;
-  width:20px;
-  height:20px;
-  top:-100px;
-  left:-8px;
-  background : #6B0101;
-  border-radius:50%;
-  box-shadow:0 0 0 3px  #914242;
-}
-
-.timeline ul li:nth-child(odd) h3{
-  padding:0;
-  margin-top:-130px;
-  color : #6B0101;
-  font-weight:600;
+  font-family: "Montserrat", sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   text-transform: uppercase;
-  font-size: 20px;
-  font-family: "Poppins";
-
 }
 
-.timeline ul li:nth-child(1) h3{
-  padding:0;
-  margin:0;
-  color: #6B0101;
-  font-weight:600;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-family: "Poppins";
-}
-
-.timeline ul li:nth-child(even) h3{
-  padding:0;
-  margin-top:-130px;
-  color:#6B0101;
-  font-weight:600;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-family: "Poppins";
-}
-.timeline ul li p{
-  margin:10px 0 0;
-  padding:0;
+.timeline ul li .content p {
+  padding: 10px 20px;
+  background-color:rgba(173, 173, 173, 0.226);
+  margin-top: 0;
   text-align: justify;
-}
-.timeline ul li h4{
-  margin:0;
-  padding:0;
-  font-size:14px;
-  font-weight:600;
-  color: #914242;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(88, 88, 88);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
 
+.timeline ul li:nth-child(even) {
+  flex-direction: row-reverse;
+}
 
-@media(max-width:1000px)
-{
-  .timeline{
-    width:100%;
+.timeline ul li:nth-child(even) .date h4 {
+  float: right
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 50%;
+  background-color: #333333;
+}
+
+@media (max-width: 650px) {
+
+  .resume h5{
+    margin-bottom: 65px; text-align:center;font-family: 'Montserrat', sans serif;font-size: 15px;
   }
-}
-@media(max-width:767px){
 
-  .image {
-    height:30em;
-    background-size:cover ;
-    width:auto;
+  .point {
+    min-width: 12px;
+    height: 12px;
+  }
+
+  p {
+      padding: 7px !important;
+  }
+
+  .timeline ul li .content p {
+    font-size: 10px;
     text-align: center;
-   }
-
-.title-education{
-  left: -160px;
-}
-
-  .timeline{
-    width:100%;
-    padding-bottom:0;
-  }
-  h1{
-    font-size:40px;
-    text-align:center;
+    padding: 5px 5px;
+    line-height: 18px;
   }
 
-  .timeline:before{
-    bottom:auto;
-    left:20px;
-    height:100%;
-
-  }
-  .timeline ul li:nth-child(odd),
-  .timeline ul li:nth-child(even)
-  {
-    width:100%;
-    text-align:left;
-    padding-left:50px;
-    padding-bottom:50px;
-  }
-  .timeline ul li:nth-child(odd):before,
-  .timeline ul li:nth-child(even):before
-  {
-    top:10px;
-    left:16px;
+  .timeline ul li .content h3 {
+    padding: 5px 5px ;
+    font-size: 10px;
+    text-transform: none;
+    line-height: 18px;
   }
 
-
-  .timeline ul li:nth-child(odd) h3,
-  .timeline ul li:nth-child(even) h3{
-    margin-top:-20px;
-    text-transform: uppercase;
-  }
-
-  .timeline ul li h3{
-    margin-top:35px;
-    text-transform: uppercase;
-  }
-  .timeline ul li p{
-    margin-top:20px;
-    text-align: justify;
+  .timeline ul li .date h4 {
+    padding: 5px 5px ;
+    font-size: 10px;
+    line-height: 18px;
   }
 }
