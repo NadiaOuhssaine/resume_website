@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
 
-
 section {
   box-sizing: border-box;
   display: flex;
@@ -37,7 +36,7 @@ section {
   font-family: 'Philosopher';
   letter-spacing: .5rem;
   color: rgb(255, 255, 255);
-  border:6px solid  #fdfdfd; // rgba(240, 54, 54, 0.596); //#ca6200; //#a76158;
+  border:6px solid  #fdfdfd;
   border-radius: 10px;
   padding:10px;
 }
@@ -78,6 +77,47 @@ section {
   color: white;
 }
 
+.aboutme{
+  background-color: #d3d3d3;
+}
+
+.heading-section{
+  text-align:center;
+  padding-top:55px;
+  padding-bottom:35px;
+  color:  #000000;
+  font-family: "Alex Brush";
+  font-size: 50px;
+}
+
+.heading-section span{
+  text-decoration:  none;
+  background: linear-gradient(to top, black 0%, black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 0.7s;
+}
+
+.heading-section span:hover {
+  background-size: 100% 100%;
+}
+
+.aboutme p{
+  margin: 0 20% 0 20%;
+  text-align: justify;
+  font-family: "Handlee";
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.aboutme .underline {
+  background: linear-gradient(to top, rgba(207, 36, 36, 0.226) /*rgba(0, 132, 255, 0.13)*/ 50%, transparent 50%);
+  color: rgb(56, 52, 52);
+  font-size: 20px;
+}
+
+.content-aboutme > mat-card {
+  width: 200px;
+}
+
 
 .more-information{
   position: fixed;
@@ -85,6 +125,7 @@ section {
   right:40px;
   z-index: 7;
 }
+
 
 .mat-expansion-panel-header {
   background-color:  rgba(94, 94, 94, 0.836);//rgba(122, 5, 5, 0.63);
@@ -96,26 +137,14 @@ section {
   margin-bottom : 30px;
 }
 
-.content-aboutme {
-  margin: 0 20% 0 20%;
-  text-align: center;
-  font-family: "Handlee";
-  font-size: 20px;
-  line-height: 30px;
+.button-resume{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color:  #4a96d1;
+  color:black;
 }
 
-.content-aboutme > mat-card {
-  width: 200px;
-}
-
-.heading-wide{
-  text-align:center;
-  color:  #000000;
-  padding-top:55px;
-  padding-bottom:35px;
-  font-family: "Alex Brush";
-  font-size: 50px;
-}
 
 @keyframes growline {
   0% {
@@ -135,69 +164,34 @@ section {
   }
 }
 
-.heading-wide:after {
-  content:' ';
-  display:block;
-  margin-top:6px;
-  border:2px solid #4d4d55;
-  border-radius:4px;
-  -webkit-border-radius:4px;
-  -moz-border-radius:4px;
-  box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-  -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-  -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-  animation: 1s ease-out 0s 1 growwide;
-  width: 25%;
-  margin-left: 37.5%;
+figcaption {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.name{
-  position: relative;
-  top: 160px;
-  text-transform: uppercase;
-  font-size: 45px;
-  font-family: 'Philosopher';
-  letter-spacing: .5rem;
-  color: rgb(255, 255, 255);
-  border:7px solid  #ca6200; //#a76158;
-  border-radius: 10px;
-  padding:10px;
-}
-
-.heading-business {
-  position: relative;
-  top: 190px;
-  font-size: 25px;
-  font-family: 'Philosopher';
-  letter-spacing: .5rem;
-  color: #FFF;
-}
-
-
-
-.button-resume{
-  margin-top : 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  background-color:  #ca6200;
-  color:black;
+figure {
+  text-align: center;
 }
 
 .hobbies-icon{
   display : flex;
-  flex-flow: row wrap;
+  flex-flow: nowrap;
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
+}
 
-  //padding: 16px;
-  //margin: 0 40% 0 40%;
+@media (max-width:900px) {
+.hobbies-icon{
+flex-wrap: wrap;
+}
+.hobbies-icon img{
+  width:20%;
+  height:20%;
+}
 }
 
 .hobbies{
-  //text-align:center;
-  //line-height: 80px;
   font-size: 40px;
   font-family: 'Amatic SC';
   color: #000000;
@@ -205,48 +199,14 @@ section {
   text-align: center;
 }
 
-.information{
-  //font-size: 15px;
-  //color: rgb(2, 2, 2);
-  //margin: 0 75% 0 5%;
-  //padding: 5px;
-  width : 30%;
-  float : left;
-  margin-right : 55px;
-  padding-left : 15px;
-  padding-top: 20px;
-  border : 5px dashed #ca6200;
-  border-radius: 10%;
-  //box-shadow: inset 40px 0px 0px 0px teal, -40px -35px teal;
-}
 
-.information h4{
-  font-family: "Amatic SC";
-  font-size: 30px;
-  font-weight: 205px;
-  color :rgb(0, 0, 0)
-}
 
-.information h5{
-  font-family: "Handlee";
-  font-size: 18px;
-  color :rgb(77, 77, 77)
-}
+
 
 .hobbies-bloc{
-  //font-size: 15px;
-  //color: rgb(2, 2, 2);
-  //margin: 0 75% 0 5%;
-  //padding: 5px;
-  width : 60%;
-  float : right;
+  margin-bottom: 100px;
 }
 
-.intro{
-  display: flex;
-  flex-wrap: wrap;
-  margin : 5%;
-}
 
 .resume{
   padding:0;
@@ -460,13 +420,5 @@ section {
   .timeline ul li p{
     margin-top:20px;
     text-align: justify;
-  }
-
-  .information{
-    width: 100%;
-  }
-
-  .hobbies-bloc{
-    width: 100%;
   }
 }
