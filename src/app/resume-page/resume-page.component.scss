@@ -16,7 +16,7 @@ section {
   background-size:cover ;
   width:auto;
   text-align: center;
-  background-image: url(/assets/pc_banner.jpg)
+  background-image: url(https://images.unsplash.com/photo-1563898061254-696f043d010c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1502&q=80);
 }
 
 .content-banner {
@@ -53,7 +53,7 @@ section {
 .icon {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
   top:195px;
 }
