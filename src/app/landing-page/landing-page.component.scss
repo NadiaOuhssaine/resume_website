@@ -10,9 +10,9 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background: radial-gradient(circle, rgb(235, 189, 162) 0%, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 70%, rgb(101, 132, 189) 100%);
+  background: radial-gradient(circle, rgb(194, 189, 147) 0%, rgb(144, 157, 181) 50%, rgb(255, 255, 255) 100%);
   background-size: 400% 400%;
-  animation: gradient 60s ease-in-out infinite;
+  animation: gradient 120s ease-in-out infinite;
 }
 
 @keyframes gradient {
@@ -28,7 +28,9 @@
 }
 
 .background-color img{
-  width:50%;
+  width:25%;
+  padding-top: 25%;
+  padding-left: 75%;
   animation: anim 15s linear infinite;
 }
 
@@ -63,7 +65,7 @@
 
 .info-block {
   position: absolute;
-  border: 2px solid  rgb(255, 255, 255);
+  border: 2px solid  rgb(176, 144, 73);
   display: table;
   transition: all 0.5s;
 }
@@ -81,7 +83,7 @@
 .info-block-container h1 {
   font-size: 3vw;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: rgb(25, 57, 101);
   line-height: 1.1;
   margin-bottom: 10px;
 }
@@ -96,15 +98,15 @@
 .info-block-container h2 {
   font-size: 3vw;
   font-family: "Amatic SC";
-  color: rgb(0, 0, 0);
+  color: rgb(25, 57, 101);
   text-transform: uppercase;
   padding:20px;
   margin-bottom: 10px;
 }
 
 .download-button{
-  background-color:  rgb(170, 94, 94);
-  color:rgb(0, 0, 0);
+  background-color:  rgb(176, 144, 73);
+  color: rgb(255, 255, 255);
 }
 
 .menu-blocks {
@@ -125,7 +127,7 @@
 .about-block {
   box-sizing: border-box;
   position: absolute;
-  border: 2px solid  rgb(255, 255, 255);
+  border: 2px solid  rgb(176, 144, 73);
   border-bottom: none;
   display: table;
   transition: all 0.5s;
@@ -144,7 +146,7 @@
 .portfolio-block {
   box-sizing: border-box;
   position: absolute;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(176, 144, 73);
   border-bottom: none;
   display: table;
   transition: all 0.5s;
@@ -163,7 +165,7 @@
 .api-block{
   box-sizing: border-box;
   position: absolute;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(176, 144, 73);
   display: table;
   transition: all 0.5s;
   z-index: 1;
@@ -183,13 +185,13 @@
   background: rgba(255, 255, 255, 0.404);
 }
 .about-block:hover {
-  border: 15px solid  rgba(122, 5, 5, 0.4);
+  border: 15px solid  rgba(25, 57, 101, 0.8);
 }
 .portfolio-block:hover {
-  border: 15px solid   rgba(122, 5, 5, 0.4);
+  border: 15px solid   rgba(25, 57, 101, 0.8);
 }
 .api-block:hover {
-  border: 15px solid   rgba(122, 5, 5, 0.4);
+  border: 15px solid   rgba(25, 57, 101, 0.8);
 }
 
 /*Set menu item numbers 1-3*/
@@ -220,14 +222,14 @@ h2.menu-item::after {
   left: -20px;
   width: 70px;
   height: 2px;
-  background: rgba(122, 5, 5, 0.63);
+  background: rgb(25, 57, 101);
   transition: all 0.5s ease 0s;
 }
 
 /*Menu-item line and initialization*/
 h2.menu-item {
   position: relative;
-  color: rgb(0, 0, 0);
+  color: rgb(25, 57, 101);
   margin: 50px;
   font-size: 28px;
   font-weight: 600;
