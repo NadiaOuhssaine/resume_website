@@ -16,6 +16,7 @@ import { ShellComponent } from './shell/shell.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 
 const components = [ShellComponent];
@@ -36,7 +37,8 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatExpansionModule,
-  RouterModule
+  RouterModule,
+  ClipboardModule
 ];
 
 @NgModule({

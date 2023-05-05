@@ -1,22 +1,53 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" mode="over">
-    <mat-nav-list>
-      <mat-list-item [routerLink]="['']"><mat-icon style="padding-right:20px">home</mat-icon>Accueil</mat-list-item>
-      <mat-list-item [routerLink]="['about']"><mat-icon style="padding-right:20px">perm_identity</mat-icon>À propos</mat-list-item>
-      <mat-list-item [routerLink]="['portfolio']"><mat-icon style="padding-right:20px">work</mat-icon>Portfolio</mat-list-item>
-      <mat-list-item [routerLink]="['api']"><mat-icon style="padding-right:20px">forum</mat-icon>Contact</mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
   <mat-sidenav-content>
-    <div style="top: 0; position: sticky; z-index: 3;">
-      <mat-toolbar color="primary" class="navbar-menu" style="box-shadow: inset 0px 0px 15px 4px rgb(29, 29, 29) ;">
-        <button mat-icon-button style="color:rgb(0, 0, 0)" (click)="drawer.toggle()" aria-label="button with menu icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span class="logo" routerLink="/"><img src="assets/svg/logo.svg" alt="logo" style="height: 30px; margin-top: 10px;"></span>
-        <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '10%' : '32%'"   ></span>
-      </mat-toolbar>
-    </div>
+    <mat-toolbar class="navbar-menu">
+      <button mat-icon-button class="menu-button" (click)="drawer.toggle()" aria-label="button with menu icon">
+        <mat-icon id="icon-menu">menu</mat-icon>
+      </button>
+      <span class="logo" routerLink="/">
+        <img src="assets/svg/logo.svg" alt="logo">
+      </span>
+      <div class="icon">
+        <a id="icon-github" mat-icon-button href="https://github.com/NadiaOuhssaine/" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+        <a id="icon-linkedin" mat-icon-button href="https://www.linkedin.com/in/nadia-ouhssaine-355793179/" target="_blank">
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </a>
+        <a id="icon-twitter" mat-icon-button href="https://twitter.com/NadiaOuhssaine" target="_blank">
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <button mat-icon-button class="icon" [matMenuTriggerFor]="menu">
+        <mat-icon id="icon-info">info_outline</mat-icon>
+      </button>
+    </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" mode="over">
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['']"><mat-icon>home</mat-icon>Accueil</mat-list-item>
+      <mat-list-item [routerLink]="['about']"><mat-icon>perm_identity</mat-icon>À propos</mat-list-item>
+      <mat-list-item [routerLink]="['portfolio']"><mat-icon>work</mat-icon>Portfolio</mat-list-item>
+      <mat-list-item [routerLink]="['api']"><mat-icon>forum</mat-icon>Contact</mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-menu #menu>
+    <button mat-menu-item (click)="searchPosition()" title="click to locate">
+      <mat-icon>fmd_good</mat-icon>
+      <span>Paris, France</span>
+    </button>
+    <button mat-menu-item [cdkCopyToClipboard]="phoneNumber" title="click to copy">
+      <mat-icon>phone</mat-icon>
+      <span>{{phoneNumber}}</span>
+    </button>
+    <button mat-menu-item [cdkCopyToClipboard]="email" title="click to copy">
+      <mat-icon>mail</mat-icon>
+      <span>{{email}}</span>
+    </button>
+    <button mat-menu-item (click)="downloadFile()" title="click to download">
+      <mat-icon>download</mat-icon>
+      <span>Mon CV</span>
+    </button>
+  </mat-menu>
 </mat-sidenav-container>

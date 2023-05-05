@@ -2,30 +2,60 @@
   height: 100%;
 }
 
-.mat-list-item {
-  font-family: 'Montserrat', sans-serif;
-  color:#000000;
+.navbar-menu {
+  position: sticky; 
+  top: 0; 
+  z-index: 3;
+  background: rgb(25, 57, 101);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#icon-menu{
+  color:rgb(176, 144, 73);
 }
 
 .logo {
   cursor: pointer;
   outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.logo img {
+  height: 28px; 
+}
+
+.icon {
+  margin-left: auto;
+  color: rgb(176, 144, 73);
+}
+
+.icon + .icon{
+  margin-left: 0;
+}
+
+#icon-github,
+#icon-linkedin,
+#icon-twitter {
+  bottom: 5px;
+}
+
+#icon-info{
+  transform: scale(1.4);
 }
 
 .sidenav {
   width: 180px;
+  background: rgb(25, 57, 101);
 }
 
-.sidenav .mat-toolbar {
-  background:inherit;
+.mat-list-item {
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(176, 144, 73);
+  background: rgb(25, 57, 101);
 }
 
-.fill-space {
-  flex: 0 1 auto;
+.mat-menu-item span {
+  font-size: 14px;
 }
 
-i {
-  font-style: normal;
-  font-size: 1.25em;
-  margin-right: 16px;
-}
